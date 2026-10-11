@@ -1,0 +1,225 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="16dp">
+
+    <!-- Header: Title and Scores -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2048"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:textColor="#776E65" />
+
+        <!-- Scores Container -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Current Score -->
+            <LinearLayout
+                android:layout_width="74dp"
+                android:layout_height="56dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_score_box"
+                android:gravity="center"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/score_label"
+                    android:textSize="12sp"
+                    android:textColor="#EEE4DA"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent" />
+
+            <!-- Best Score -->
+            <LinearLayout
+                android:layout_width="74dp"
+                android:layout_height="56dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_score_box"
+                android:gravity="center"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/best_label"
+                    android:textSize="12sp"
+                    android:textColor="#EEE4DA"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_best_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Subtitle and Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/instructions"
+            android:textSize="13sp"
+            android:textColor="#776E65" />
+
+        <Button
+            android:id="@+id/btn_undo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_button_secondary"
+            android:text="@string/undo"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/btn_new_game"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_button"
+            android:text="@string/new_game"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+
+    <!-- Game Board Container -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp">
+
+        <com.generated.app.GameView
+            android:id="@+id/game_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+        <!-- Overlay for Game Over / Win -->
+        <LinearLayout
+            android:id="@+id/overlay_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#D0FAF8EF"
+            android:visibility="gone"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/overlay_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_over_title"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="#776E65"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/overlay_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/game_over_msg"
+                android:textSize="16sp"
+                android:textColor="#8F7A66"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/btn_overlay_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_button"
+                    android:text="@string/try_again"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:stateListAnimator="@null" />
+
+                <Button
+                    android:id="@+id/btn_overlay_continue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg_button_secondary"
+                    android:text="@string/continue_game"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:visibility="gone"
+                    android:stateListAnimator="@null" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

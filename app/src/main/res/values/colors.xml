@@ -1,0 +1,9 @@
+<resources>
+    <color name="bg_main">#FAF8EF</color>
+    <color name="board_bg">#BBADA0</color>
+    <color name="tile_empty">#CDC1B4</color>
+    <color name="primary_dark">#776E65</color>
+    <color name="primary_light">#8F7A66</color>
+    <color name="button_accent">#8F7A66</color>
+    <color name="white">#FFFFFF</color>
+</resources>

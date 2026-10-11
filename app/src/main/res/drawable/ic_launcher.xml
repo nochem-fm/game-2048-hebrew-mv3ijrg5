@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Rounded background in warm 2048 golden tone -->
+    <path
+        android:fillColor="#EDC22E"
+        android:pathData="M18,4 L78,4 A14,14 0 0,1 92,18 L92,78 A14,14 0 0,1 78,92 L18,92 A14,14 0 0,1 4,78 L4,18 A14,14 0 0,1 18,4 Z" />
+    <!-- Sub-tile background -->
+    <path
+        android:fillColor="#F67C5F"
+        android:pathData="M16,16 L44,16 A6,6 0 0,1 50,22 L50,50 A6,6 0 0,1 44,56 L16,56 A6,6 0 0,1 10,50 L10,22 A6,6 0 0,1 16,16 Z" />
+    <!-- Stylized number 2 on the top-left tile -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M23,28 C23,25 26,23 30,23 C34,23 37,25 37,28 C37,31 34,34 30,38 L23,45 L38,45 L38,49 L21,49 L21,45 L30,36 C32,34 33,32 33,29 C33,27 31,26 29,26 C27,26 25,27 25,29 Z" />
+    <!-- Number 0 outline block on top-right -->
+    <path
+        android:fillColor="#F59563"
+        android:pathData="M56,16 L78,16 A6,6 0 0,1 84,22 L84,50 A6,6 0 0,1 78,56 L56,56 A6,6 0 0,1 50,50 L50,22 A6,6 0 0,1 56,16 Z" />
+    <!-- Stylized number 4 on bottom-left -->
+    <path
+        android:fillColor="#EEE4DA"
+        android:pathData="M16,58 L44,58 A6,6 0 0,1 50,64 L50,86 A6,6 0 0,1 44,92 L16,92 A6,6 0 0,1 10,86 L10,64 A6,6 0 0,1 16,58 Z" />
+    <!-- Stylized number 8 on bottom-right -->
+    <path
+        android:fillColor="#EDCF72"
+        android:pathData="M56,58 L78,58 A6,6 0 0,1 84,64 L84,86 A6,6 0 0,1 78,92 L56,92 A6,6 0 0,1 50,86 L50,64 A6,6 0 0,1 56,58 Z" />
+</vector>

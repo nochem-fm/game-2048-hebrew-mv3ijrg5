@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">2048</string>
+    <string name="score_label">ניקוד</string>
+    <string name="best_label">שיא</string>
+    <string name="new_game">משחק חדש</string>
+    <string name="undo">בטל מהלך</string>
+    <string name="game_over_title">המשחק נגמר!</string>
+    <string name="game_over_msg">אין עוד מהלכים זמינים.</string>
+    <string name="you_won_title">כל הכבוד!</string>
+    <string name="you_won_msg">הגעת לאריח 2048! באפשרותך להמשיך לשחק לתוצאה גבוהה יותר.</string>
+    <string name="continue_game">המשך</string>
+    <string name="try_again">נסה שוב</string>
+    <string name="instructions">החלק כדי להזיז את האריחים ולחבר מספרים זהים!</string>
+</resources>
